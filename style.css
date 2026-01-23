@@ -40,8 +40,6 @@ nav a { color:#fff;
   justify-content: center;
   text-align: center;
   color: #08ebdf;
-  
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -88,7 +86,7 @@ nav a { color:#fff;
 }
 
 .btn { background:#fff; 
-    color:#093d95; 
+    color:#136776; 
     padding:0.8rem 1.5rem; 
     border-radius:30px; 
     text-decoration:none;
@@ -97,7 +95,7 @@ nav a { color:#fff;
 }
 
 .hero .btn:hover {
-  background: #a50707;
+  background:mediumturquoise;
 }
 
 /* Slideshow animation */
@@ -119,6 +117,102 @@ nav a { color:#fff;
   }
 }
 
+.header-slider {
+  position: relative;
+  height: 90px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  animation: headerSlide 20s infinite linear;
+}
+
+/* Dark overlay for readability */
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Home page header styles */
+.home-header {
+  background-color: #0b918a;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Header content stays on top */
+.header-content {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: left;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  height: 100%;
+}
+
+/* Logo */
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00c6ff;
+}
+
+.favicon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Navigation */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: mediumturquoise;
+}
+
+/* 🔄 Horizontal sliding animation */
+@keyframes headerSlide {
+  0% {
+    background-image: url("./Images/DA.jpg");
+    background-position: 0% center;
+  }
+  25% {
+    background-image: url("Images/py.jpeg");
+    background-position: 100% center;
+  }
+  50% {
+    background-image: url("Images/DA.jpg");
+    background-position: 0% center;
+  }
+  75% {
+    background-image: url("Images/web.png");
+    background-position: 100% center;
+  }
+  100% {
+    background-image: url("Images/py2.webp");
+    background-position: 0% center;
+  }
+}
+
 
 .services { padding:4rem 2rem; 
     text-align:center;}
@@ -130,11 +224,20 @@ nav a { color:#fff;
 .card { background:#fff; 
     padding:1.5rem; 
     border-radius:12px; 
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    float:inline-start
+  }
 
-.contact { padding:3rem 2rem; 
-    background:#e3f2fd; 
-    text-align:center;}
+.card:hover{
+  color: mediumturquoise;
+}
+
+.contact { padding:4rem 2rem; 
+    max-width: 500px;
+    background:rgb(176, 182, 243); 
+    text-align:justify;
+    margin:10px 10px 10px 10px;
+    box-shadow:0 2px 8px rgba(28, 6, 228, 0.1);}
 
 .login { padding:3rem 2rem; 
     text-align:center;}
@@ -162,9 +265,25 @@ nav a { color:#fff;
     border-radius:5px; 
     cursor:pointer;}
 
-.auth-form button:hover { background:#00bcd4;}
+/* .hover-item:hover {background:wheat} */
 
-footer { background:#0b3d91; 
+.auth-form button:hover { background:#d420000b;}
+
+.reg { font-weight:bold; 
+    color:#8a1b1b;}
+
+.about-us { padding:4rem 2rem; 
+    max-width:800px; 
+    margin:0 auto; 
+    padding-top: 10px;
+    background:#fff; 
+    border-radius:10px; 
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    text-align: justify;
+  }
+    
+
+footer { background:#0b918a; 
     color:white; 
     text-align:center; 
     padding:1rem; 
@@ -172,7 +291,8 @@ footer { background:#0b3d91;
 
 footer .text-color { font-size:1.0rem;
     margin-bottom:0.5rem; 
-    color: #00bcd4;}
+    color: #f7f7f7;}
+
 
 footer .nav-container { display: flex; 
       justify-content: space-around; 
@@ -184,3 +304,4 @@ footer .nav-container { display: flex;
 footer .nav-column { flex: 1;
       min-width: 10px;
     }
+.text-color:hover { color:wheat;}

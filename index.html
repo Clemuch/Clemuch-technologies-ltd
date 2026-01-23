@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="home-header">
+  <div class="header-overlay"></div>
+
+  <div class="header-content">
     <img src="./Images/py.jpe" alt="Clemuch Technologies Ltd Logo" class="favicon" />
     <div class="logo">Clemuch <span>Technologies</span> Ltd</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="Public/contact.html">Contact</a>
-      <a href="Sign in/Sign-in.html">Register/Login</a>
+      <a href="#index.html" class="hover-item">Home</a>
+      <a href="#services" class="hover-item">Services</a>
+      <a href="./Public/contact.html" class="hover-item">Contact</a>
+      <a href="./Sign in/Sign-in.html" class="hover-item">Sign-in/Login</a>
+      <a href="./Public/about.html" class="hover-item">About Us</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <section id="home" class="hero">
     <h1 class="bgc"><strong>Welcome to Clemuch Technologies Ltd</strong></h1>
@@ -31,9 +36,10 @@
       <div class="card"><h3>JAMB & Post-UTME Services</h3><p>Registration, exam support, and system setup for CBT centers and candidates.</p></div>
       <div class="card"><h3>Data Analysis</h3><p>We provide expert data cleaning, visualization, and analysis to support smart decisions.</p></div>
       <div class="card"><h3>Web Development</h3><p>Custom-built websites and web apps to help your business grow online.</p></div>
+      <div class="card"><h3>Python Development</h3><p>We train our students on python programs and python GUI for building applications.</p></div>
+      <div class="card"><h3>Robotics</h3><p>We design and contructs robots to meet your daily needs.</p></div>
     </div>
   </section>
-
 
   
 <footer>
@@ -41,14 +47,14 @@
     </div>
 
   <div class="nav-container">
-      <div class="home-links">
+      <div class="home-links" class="hover-item">
         <div class = nav-column>
         <a href="index.html"><p class="text-color">Home</p></a>
         </div>
       </div>
     
-      <div class="service-links">
-        <div class = nav-column>
+      <div class="service-links" class="hover-item">
+        <div class = "nav-column" class="hover-item">
         <a href="#services"><p class="text-color">Services</p></a>
         </div>
       </div>
@@ -60,76 +66,16 @@
       </div>
 
       <div class="register-links">
-        <a href="Sign in/Sign-in.html"><p class="text-color">Register/Login</p></a>
+        <a href="Sign in/Sign-in.html" class="hover-item"><p class="text-color">Register/Login</p></a>
       </div>
 
       <div class="about-links">
         <div class = nav-column>
-        <a href="#about"><p class="text-color">About Us</p></a>
+        <a href="./Public/about.html" class="hover-item"><p class="text-color">About Us</p></a>
         </div>
       </div>
     </div>
-    <p>© 2025 Clemuch Technologies. All Rights Reserved.</p>
+    <p>© 2026 Clemuch Technologies. All Rights Reserved.</p>
   </footer>
-  <script src="script.js"></script>
-
-<!--
-<footer>
-   <div class="whatsapp-footer">
-     Navigation columns 
-    <div class="nav-container">
-      <div class="nav-column">
-        <h3>What we do</h3>
-        <ul>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Blogs</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-column">
-        <h3>Who we are</h3>
-        <ul>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-column">
-        <h3>Use WhatsApp</h3>
-        <ul>
-          <li><a href="#">Android</a></li>
-          <li><a href="#">iPhone</a></li>
-          <li><a href="#">Mac/PC</a></li>
-          <li><a href="#">WhatsApp Web</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-column">
-        <h3>Need help?</h3>
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Security</a></li>
-          <li><a href="#">Security Advisories</a></li>
-        </ul>
-      </div>
-    </div>
-
-    Bottom bar 
-    <div class="bottom-bar">
-      <span>2026 © WhatsApp LLC</span>
-      <a href="#">Terms & Privacy Policy</a>
-      <a href="#">Sitemap</a>
-      <div class="social-icons">
-        <a href="#">X</a>
-        <a href="#">YouTube</a>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-      </div>
-      <button class="language">English ▼</button>
-    </div>
-  </div>
-</footer>
--->
 </body>
 </html>
