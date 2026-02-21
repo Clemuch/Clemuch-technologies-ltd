@@ -9,12 +9,12 @@ body { background:#f7f8fc;
 
 header { background:#0b3d91; 
     color:#fff; 
-    padding:1rem 2rem; 
-    display:flex; 
+    padding:1rem 2rem;
     justify-content:space-between; 
     align-items:center; 
     position:sticky; 
-    top:0;}
+    top:0;
+  }
 
 header .logo { font-size:1.5rem; 
     font-weight:bold;}
@@ -22,7 +22,7 @@ header .logo { font-size:1.5rem;
 header .logo span { color:#00bcd4;}
 
 nav a { color:#fff; 
-    text-decoration:none; 
+    text-decoration:none;
     margin:0 1rem; 
     font-weight:500;}
 
@@ -242,6 +242,9 @@ nav a:hover {
 .login { padding:3rem 2rem; 
     text-align:center;}
 
+    #rememberMe {
+      display: inline-block;;
+    }
 .auth-wrapper { display:flex; 
     justify-content:center; 
     gap:2rem; 
@@ -267,10 +270,10 @@ nav a:hover {
 
 /* .hover-item:hover {background:wheat} */
 
-.auth-form button:hover { background:#d420000b;}
+.auth-form button:hover { background:#6f291c;}
 
 .reg { font-weight:bold; 
-    color:#8a1b1b;}
+    color:#17acc7;}
 
 .about-us { padding:4rem 2rem; 
     max-width:800px; 
@@ -294,14 +297,91 @@ footer .text-color { font-size:1.0rem;
     color: #f7f7f7;}
 
 
-footer .nav-container { display: flex; 
-      justify-content: space-around; 
-      flex-wrap: wrap; 
-      gap: 1rem; 
+footer .nav-container { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+      gap: 2.5rem;
       margin-bottom: 1rem;
+      padding: 0 1rem;
     }
 
 footer .nav-column { flex: 1;
       min-width: 10px;
     }
 .text-color:hover { color:wheat;}
+
+/* Screen widths */
+@media (min-width: 319px) and (max-width: 480px) {
+      body {
+        background-color: whitesmoke;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 1200px) {
+      body {
+        background-color: whitesmoke;
+      }
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      body {
+        background-color: whitesmoke;
+      }
+    }
+
+    @media (min-width: 1601px) {
+      body {
+        background-color: whitesmoke;
+      }
+    }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: rgb(240, 103, 103);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltiptext2 {
+  visibility: hidden;
+  width: 130px;
+  background-color: rgb(240, 103, 103);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+

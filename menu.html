@@ -1,0 +1,151 @@
+<header class="home-header">
+  <div class="header-overlay"></div>
+
+  <div class="header-content">
+    <div class="left-side">
+      <img src="./Images/py.jpe" alt="Clemuch Technologies Ltd Logo" class="favicon" />
+      <div class="logo">Clemuch <span>Technologies</span> Ltd</div>
+    </div>
+
+    <!-- Hamburger button - visible only on mobile -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <a href="#index.html" class="hover-item">Home</a>
+      <a href="#services" class="hover-item">Services</a>
+      <a href="./Public/contact.html" class="hover-item">Contact</a>
+      <a href="./Sign in/Sign-in.html" class="hover-item">Sign-in/Login</a>
+      <a href="./Public/about.html" class="hover-item">About Us</a>
+    </nav>
+  </div>
+</header>
+
+/* ──────────────────────────────────────── */
+.home-header {
+  position: relative;
+  padding: 1rem 5%;
+  background: #0f172a;          /* or your preferred color */
+  color: white;
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);  /* optional dark overlay */
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.favicon {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #60a5fa; /* or your brand color */
+}
+
+/* ─── Desktop nav ──────────────────────────────── */
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.hover-item:hover {
+  color: #60a5fa; /* or your accent color */
+}
+
+/* ─── Mobile menu button ───────────────────────── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+/* ─── Mobile layout ────────────────────────────── */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    inset: 0 0 0 35%;
+    top: 0;
+    right: -65%;                    /* hidden by default */
+    background: #0f172a;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 50;
+    padding: 2rem;
+  }
+
+  /* Open state */
+  .main-nav.active {
+    right: 0;
+  }
+
+  /* Hamburger → X transformation */
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
